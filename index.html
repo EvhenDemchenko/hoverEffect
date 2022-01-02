@@ -1,31 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hover</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <div class="container">
-    <div class="menu">
-        <div class="item"> lvl1
-            <div class="item2">lvl2</div>
-            <div class="item2">lvl2</div>
-            <div class="item2">lvl2</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>header</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="inner">
+          <div class="header-serch">
+            <input class="input" type="text" />
+          </div>
+          <ul class="header-list">
+            <li class="list-item">Testimotionals</li>
+            <li class="list-item">
+              <span>
+                About us
+                <svg
+                  width="17"
+                  height="11"
+                  viewBox="0 0 17 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2.25L8.5 8.75L15 2.25"
+                    stroke="#353535"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <div class="list-item__link">
+                <a href="" class="item-link">Our story</a>
+                <a href="" class="item-link">Our team</a>
+                <a href="" class="item-link">Our mission</a>
+              </div>
+            </li>
+            <li class="list-item">
+              <span>
+                Servise
+                <svg
+                  width="17"
+                  height="11"
+                  viewBox="0 0 17 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2.25L8.5 8.75L15 2.25"
+                    stroke="#353535"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <div class="list-item__link">
+                <a href="" class="item-link">Servise #1</a>
+                <a href="" class="item-link">Servise #2</a>
+                <a href="" class="item-link">Servise #3</a>
+                <a href="" class="item-link">Servise #4</a>
+              </div>
+            </li>
+            <li class="list-item">
+              <span>
+                Contact<svg
+                  width="17"
+                  height="11"
+                  viewBox="0 0 17 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2.25L8.5 8.75L15 2.25"
+                    stroke="#353535"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <div class="list-item__link">
+                <a href="tel:380937876951" class="item-link">phone</a>
+                <a href="mailto:anti_2012@ukr.net" class="item-link">email</a>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="item">lvl1
-            <div class="item2">lvl2</div>
-            <div class="item2">lvl2</div>
-            <div class="item2">lvl2</div>
-        </div>
-        <div class="item">lvl1
-            <div class="item2">lvl2</div>
-            <div class="item2">lvl2</div>
-            <div class="item2">lvl2</div>
-        </div>
-    </div>
-</div>
-</body>
+      </div>
+    </header>
+    <section class="section">
+      <div class="container dynemic">
+        <h1 class="main-text">HOME</h1>
+      </div>
+    </section>
+    <script>
+        let text = document.querySelector(".main-text");
+        const item = document.querySelectorAll("span");
+        item.forEach((element) => {
+          element.addEventListener("mouseenter", function () {
+            text.textContent = element.textContent;
+          });
+          element.addEventListener("mouseleave", function () {
+            text.textContent = "home";
+            text.style.textTransform = "uppercase";
+          });
+        });
+      </script>
+  </body>
+  
 </html>

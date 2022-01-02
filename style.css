@@ -1,32 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
 *{
-    color: #ffffff;
-    font-family: sans-serif;
-}
-.menu{
-    margin: 0 auto;
-    max-width: 1100px;
-    display: flex;
-}
-.item + .item{
-    padding-left: 10px;    
-}
-.item{
-    z-index: 5;
-    cursor: pointer;
-}
-.item:hover .item2{
-    display: block;
-    transition: all 0.5s;
+    text-decoration: none;
+    list-style: none;
+    font-family: Montserrat;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-size: 24px;
+    box-sizing: border-box;
 
 }
-.item > .item2{
-    transform:translateY(-300px);
-    transition: all 0.4s;
+
+.header{
+    box-shadow: inset 0px -1px 0px rgba(66, 66, 66, 0.4);
 }
-.item:hover > .item2{
-    transform:translateY(0px);
-    z-index: 1;
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
 }
-.container{
-    background-color: black;
+
+.inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-serch {
+}
+.header-list {
+    display: flex;
+}
+
+.list-item + .list-item{
+    margin-left:62px;
+}
+.list-item:nth-child(2){
+    margin-left: 40px;
+}
+.list-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 24px 0 25px 0;
+}
+
+.list-item__link {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 77px;
+    right: -70px;
+    width: 229px;
+    border: 1px solid rgba(66, 66, 66, 0.4);
+    border-radius: 4px;
+    font-weight:600;
+}
+.list-item:hover .list-item__link{
+    display: flex;
+}
+
+.item-link {
+    padding: 0 24px 0;
+    padding-top: 16px ;
+}
+.item-link:first-child {
+    padding-top: 32px;
+}
+.item-link:last-child {
+    padding-bottom: 32px;
+}
+span{
+    font-size: 24px;
+}
+.input{
+    border-radius: 21px;
+    background: #C4C4C4;
+    height: 40px;
+    width: 193px;
+}
+.section{
+    display: flex;
+
+    align-items: center;
+    height: 100vh;
+
+}   
+.main-text{
+    font-size: 80px;
+    font-weight: 800;
+    transition: all 0.5s;
 }
